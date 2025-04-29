@@ -1,0 +1,1 @@
+web: gunicorn christie_restaurant.wsgi
