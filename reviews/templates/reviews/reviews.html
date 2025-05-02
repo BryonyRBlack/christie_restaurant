@@ -5,7 +5,10 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<h1>{{ home.title }}</h1>
-<p>{{ home.content }}</p>
+<h1>The Reviews are in</h1>
+<form id="reviewForm" method="post">
+    {{ review_form | crispy }}
+    <button id="reviewButton" class = "btn">Submit</button>
+    </form>
 <!-- index.html content ends here -->
 {% endblock %}
