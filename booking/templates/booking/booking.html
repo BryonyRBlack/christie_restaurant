@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- index.html content starts here -->
+<h1>Book Here</h1>
+<form id="bookingForm" method="post">
+    {{ booking_form | crispy }}
+    <button id="bookingButton" class = "btn">Submit</button>
+    </form>
+<!-- index.html content ends here -->
+{% endblock %}
