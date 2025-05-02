@@ -19,7 +19,7 @@ from django.urls import path, include
 from booking.views import my_booking
 from reviews.views import my_reviews
 from contact.views import contact_us
-from home.views import home_page
+#from home.views import home_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,5 @@ urlpatterns = [
     path('booking/', my_booking, name='booking'),
     path('reviews/', my_reviews, name='review'),
     path('contact/', contact_us, name='contact_us'),
-    path('home/', home_page, name='home')
+    path('', include("home.urls"), name='home-urls')
 ]
