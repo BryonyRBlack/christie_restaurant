@@ -5,4 +5,4 @@ from .models import Home
 # Create your views here.
 class home(generic.ListView):
     queryset = Home.objects.all()
-    template_name = "home.html"
+    template_name = "home/index.html"
