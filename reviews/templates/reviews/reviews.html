@@ -5,12 +5,19 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="forms container bg-light form p-5">
-    <h1>The Reviews are in</h1>
-    <form id="reviewForm" method="post" class="d-grid">
-        {{ review_form | crispy }}
-        <button id="reviewButton" class = "btn btn-block btn-secondary">Submit</button>
-        </form>
-</div>
+ <div class="row">
+    <div class="col-6">
+        {% for review in reviews %}
+        {{ review.body }}
+        {% endfor %}
+    </div>
+    <div class="forms col-6 bg-light form p-5">
+        <h1>Review us Here</h1>
+        <form id="reviewForm" method="post" class="d-grid">
+            {{ review_form | crispy }}
+            <button id="reviewButton" class = "btn btn-block btn-secondary">Submit</button>
+            </form>
+    </div>
+ </div>
 <!-- index.html content ends here -->
 {% endblock %}
