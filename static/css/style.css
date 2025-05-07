@@ -12,3 +12,8 @@ body {
 h1 {
     font-family: "Limelight";
 }
+
+.form {
+    max-width: 50%;
+    margin-top: 5%;
+}
