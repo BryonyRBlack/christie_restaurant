@@ -5,10 +5,12 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<h1>Book Here</h1>
-<form id="bookingForm" method="post" class="d-grid">
-    {{ booking_form | crispy }}
-    <button id="bookingButton" class = "btn btn-block btn-secondary">Submit</button>
-    </form>
+<div class="forms container bg-light form p-5">
+    <h1>Book Here</h1>
+    <form id="bookingForm" method="post" class="d-grid">
+        {{ booking_form | crispy }}
+        <button id="bookingButton" class = "btn btn-block btn-secondary">Submit</button>
+        </form>
+</div>
 <!-- index.html content ends here -->
 {% endblock %}
