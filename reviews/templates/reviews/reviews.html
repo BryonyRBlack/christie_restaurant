@@ -6,9 +6,9 @@
 
 <!-- index.html content starts here -->
 <h1>The Reviews are in</h1>
-<form id="reviewForm" method="post">
+<form id="reviewForm" method="post" class="d-grid">
     {{ review_form | crispy }}
-    <button id="reviewButton" class = "btn">Submit</button>
+    <button id="reviewButton" class = "btn btn-block btn-secondary">Submit</button>
     </form>
 <!-- index.html content ends here -->
 {% endblock %}
