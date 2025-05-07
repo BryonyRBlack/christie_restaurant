@@ -5,7 +5,14 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<h1>{{ home.title }}</h1>
-<p>{{ home.content }}</p>
+<div class="row">
+    <div class="col-sm-4 p-5">
+        {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/books.jpg' %}" width="75%" alt="Images of Books by Agatha Christie">{% endif %}
+    </div>
+    <div class="col-sm-4 bg-light p-5">
+        <h1>{{ home.title }}</h1>
+        <p>{{ home.content }}</p>
+    </div>
+</div>
 <!-- index.html content ends here -->
 {% endblock %}
