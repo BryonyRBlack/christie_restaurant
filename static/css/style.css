@@ -17,3 +17,7 @@ h1 {
     max-width: 50%;
     margin-top: 5%;
 }
+
+.images {
+    border-radius: 15%;
+}
