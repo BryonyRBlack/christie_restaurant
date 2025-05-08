@@ -6,21 +6,34 @@ from . forms import ReviewForms
 
 # Create your views here.
 
-class ReviewList(generic.ListView):
-    queryset = Review.objects.filter(status=1)
-    template_name = "reviews/reviews.html"
+#class ReviewList(generic.ListView):
+    #queryset = Review.objects.filter(status=1)
+    #template_name = "reviews/reviews.html"
 
+
+#def my_reviews(request):
+    #review = Review.objects.all().order_by('-created_at')
+    #review_form = ReviewForms
+
+
+    #return render(
+        #request,
+        #"reviews/reviews.html",
+        #{
+            #"review_form": review_form,
+            #"review": review,
+        #}   
+    #)
 
 def my_reviews(request):
-    review = Review.objects.all().order_by('-created_at')
+    reviews = Review.objects.all().order_by('-created_at')
     review_form = ReviewForms
-
 
     return render(
         request,
-        "reviews/reviews.html",
+        'reviews/reviews.html',
         {
-            "review_form": review_form,
-            "review": review,
-        }   
+            'reviews': reviews,
+            'review_form': review_form
+        }
     )

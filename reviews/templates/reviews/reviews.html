@@ -6,12 +6,17 @@
 
 <!-- index.html content starts here -->
  <div class="row">
-    <div class="col-6">
+    <div class="col-4 bg-light p-5">
         {% for review in reviews %}
+        {{ review.user | linebreaks }}
+        {{ review.title | linebreaks }}
+        {{ review.rating | linebreaks }}
         {{ review.body }}
         {% endfor %}
     </div>
-    <div class="forms col-6 bg-light form p-5">
+    <div class="col-4">
+    </div>
+    <div class="forms col-4 bg-light form p-5">
         <h1>Review us Here</h1>
         <form id="reviewForm" method="post" class="d-grid">
             {{ review_form | crispy }}
