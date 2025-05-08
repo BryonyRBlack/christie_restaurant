@@ -9,6 +9,7 @@
     <h1>Book Here</h1>
     <form id="bookingForm" method="post" class="d-grid">
         {{ booking_form | crispy }}
+        {% csrf_token %}
         <button id="bookingButton" class = "btn btn-block btn-secondary">Submit</button>
         </form>
 </div>
