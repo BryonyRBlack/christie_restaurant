@@ -6,8 +6,9 @@
 
 <!-- index.html content starts here -->
 <div class="row justify-content-around">
-    <div class="bg-light p-3 col-md-8 card mb-4 mt-3" style="max-width: 18rem;">
+    <div class="bg-light p-3 col-md-8 card mb-4 mt-3" style="max-width: 70rem;">
         <div class="card-body">
+            <h1 class="text-center">The Reviews are in</h1>
                 {% for review in reviews %}
                 <div class="comments p-2 card border-dark mb-4">
                     <h5 class="card-title">{{ review.title | linebreaks }}</h5>
@@ -20,7 +21,7 @@
     </div>
 
     
-    <div class="forms card bg-light form p-3 text-center">
+    <div class="forms card bg-light form p-3 text-center col-md-4" style="max-width: 30rem;">
         <h1>Review us Here</h1>
         <form id="reviewForm" method="post" class="d-grid">
             {{ review_form | crispy }}
