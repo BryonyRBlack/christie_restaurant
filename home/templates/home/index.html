@@ -9,7 +9,7 @@
     <div class="col-sm-4 p-5">
         {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/books.jpg' %}" width="75%" alt="Images of Books by Agatha Christie" class="images">{% endif %}
     </div>
-    <div class="col-sm-4 bg-light p-5 mt-5">
+    <div class="col-sm-4 bg-light p-5 mt-5 card">
         <h1>{{ home.title }}</h1>
         <p>{{ home.content }}</p>
     </div>
