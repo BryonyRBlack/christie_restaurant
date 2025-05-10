@@ -19,6 +19,7 @@ from django.urls import path, include
 from booking.views import my_booking
 from reviews.views import my_reviews
 from contact.views import contact_us
+from menu.views import food_list
 #from home.views import home_page
 
 urlpatterns = [
@@ -27,5 +28,6 @@ urlpatterns = [
     path('booking/', my_booking, name='booking'),
     path('reviews/', my_reviews, name='review'),
     path('contact/', contact_us, name='contact_us'),
-    path('', include("home.urls"), name='home-urls')
+    path('', include("home.urls"), name='home-urls'),
+    path('menu/', food_list, name='menu'),
 ]
