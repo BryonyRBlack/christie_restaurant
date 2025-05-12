@@ -2,15 +2,35 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block title}
+{% if category %}{{ category.name }}{% else %}Products{% endif %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="forms card container bg-light form p-3 text-center mt-5">
-    <h1>Menu</h1>
-    <form id="bookingForm" method="post" class="d-grid">
-        {{ food_list | crispy }}
-        {% csrf_token %}
-        </form>
+<div class="row">
+    <div id="sidebar" class="col-3">
+        <h3>Options</h3>
+        <ul>
+            <li {% if not category %}class="selected"{% endif %}>
+                
+            </li>
+            {% for cat in categories %}
+                <li {% if category.slug == cat.slug %}class="selected"{% endif %}>
+                    <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h1>{% if category %}{{ category.name}}{% else %}Products{% endif %}</h1>
+        {% for product in products %}
+            <div class="item">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/default.jpg' %}{% endif %}">
+                {{ product.name }}
+            </div>
+    </div>
+    {% endfor %}
 </div>
-<!-- index.html content ends here -->
 {% endblock %}
+<!-- index.html content ends here-->
