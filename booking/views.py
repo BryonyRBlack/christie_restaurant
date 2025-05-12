@@ -4,6 +4,7 @@ from .models import Booking
 from .forms import BookingForm
 
 # Create your views here.
+
 def my_booking(request):
     booking_form = BookingForm()
 
@@ -12,7 +13,6 @@ def my_booking(request):
         if booking_form.is_valid():
             booking = booking_form.save(commit=False)
             booking.author = request.user
-            booking.post = bookings
             booking.save()
             messages.add_message(
                 request, messages.SUCCESS,
