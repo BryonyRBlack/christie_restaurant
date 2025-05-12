@@ -3,9 +3,9 @@ from django.views import generic
 from .models import Category, Food
 # Create your views here.
 
-#class FoodList(generic.ListView):
-    #queryset = Food.objects.all()
-    #template_name = "menu.html"
+class FoodList(generic.ListView):
+    queryset = Food.objects.filter(available=True)
+    template_name = "menu/html"
 
 def food_list(request, category_slug=None):
     category = None

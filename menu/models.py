@@ -30,7 +30,7 @@ class Food(models.Model):
     available = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ['-category']
         indexes = [
             models.Index(fields=['id', 'slug']),
             models.Index(fields=['name']),

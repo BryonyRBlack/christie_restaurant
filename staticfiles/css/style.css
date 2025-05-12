@@ -20,3 +20,7 @@ h1 {
 .images {
     border-radius: 15%;
 }
+
+.image-container {
+    position: relative;
+}
