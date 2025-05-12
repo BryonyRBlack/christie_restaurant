@@ -19,7 +19,11 @@
                             <img class="card-img-top" src="{{ product.image.url }}">
                             {% endif %}
                             <div class="card-title">
-                                <p>{{ product.name}} </p>
+                                <br>
+                                <h5>{{ product.name}}</h5> 
+                                    <div class="text-muted">
+                                    <p class="card-text">{{ product.category }}</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
