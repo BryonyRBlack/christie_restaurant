@@ -1,11 +1,11 @@
-.limelight-regular {
-    font-family: "Limelight", sans-serif;
+.pathway-gothic-one-regular {
+    font-family: "Pathway Gothic One", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
-.space-grotesk {
-    font-family: "Space Grotesk", sans-serif;
+.star-wars {
+    font-family: "Star Wars", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -17,15 +17,15 @@ body {
 }
 
 h1 {
-    font-family: "Limelight";
+    font-family: "Star Wars";
 }
 
 h5 {
-    font-family: "Limelight";
+    font-family: "Star Wars";
 }
 
 .card-text {
-    font-family: "Space Grotesk";
+    font-family: "Pathway Gothic One";
 }
 
 .form {
