@@ -21,7 +21,7 @@ from reviews.views import my_reviews
 from contact.views import contact_us
 from menu.views import food_list
 from booking import views
-from news.views import article_list
+#from news.views import article_list
 #from home.views import home_page
 
 urlpatterns = [
@@ -32,5 +32,5 @@ urlpatterns = [
     path('contact/', contact_us, name='contact_us'),
     path('', include("home.urls"), name='home-urls'),
     path('menu/', food_list, name='menu'),
-    path('news/', article_list, name='news')
+    path('news/', include("news.urls"), name='news')
 ]
