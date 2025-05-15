@@ -21,11 +21,15 @@
     
     <div class="forms card bg-light form p-3 text-center col-md-4 mt-5 sticky-top" id="review-form" style="max-width: 30rem;">
         <h1>Join the Conversation</h1>
-        <form id="reviewForm" method="post" class="d-grid">
-            {{ review_form | crispy }}
-            {% csrf_token %}
-            <button id="reviewButton" class = "btn btn-block btn-secondary">Submit</button>
+        {% if user.is_authenticated %}
+            <form id="reviewForm" method="post" class="d-grid">
+                {{ review_form | crispy }}
+                {% csrf_token %}
+                <button id="reviewButton" class = "btn btn-block btn-secondary">Submit</button>
             </form>
+        {% else %}
+        <p>Log in to post on the social feed</p>
+        {% endif %}
     </div>
 </div>
 <!-- index.html content ends here -->

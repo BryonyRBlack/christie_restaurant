@@ -70,6 +70,13 @@
                 </li>
                 {% endif %}
             </ul>
+            <div class="text-secondary">
+                {% if user.is_authenticated %}
+                <p class="text-end">Welcome back {{user}}</p>
+                {% else %}
+                <p class="text-end">You are not logged in, and won't be able to comment</p>
+                {% endif %}
+            </div>
         </div>
     </nav>
 
@@ -83,6 +90,7 @@
         {% endfor %}
     </div>
     <main>
+        
 
         {% block content %}
         <!-- Content Goes here -->
