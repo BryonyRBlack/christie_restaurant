@@ -8,4 +8,28 @@
     <p>{{ article.body }}</p>
 </div>
 
+<div class="row justify-content-around align-items-start">
+    <div class="bg-light p-3 col-md-8 card mt-5" style="max-width: 70rem;">
+        <div class="card-body">
+            <h1 class="text-center">Comments</h1>
+                {% for comment in comments %}
+                <div class="comments p-2 card border-dark mb-4">
+                    <h6 class="card-subtitle text-muted card-text">{{ comment.user }} rated this article
+                    {{ comment.rating }} Stars</h6>
+                    <p class="card-title review-titles">{{ comment.body | linebreaks }}</p>
+            </div>
+            {% endfor %}   
+        </div>
+    </div>
+
+<div class="forms card bg-light form p-3 text-center col-md-4 mt-5" id="comment-form" style="max-width: 30rem;">
+        <h1>Comment Here</h1>
+        <form id="commentForm" method="post" class="d-grid">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button id="commentButton" class = "btn btn-block btn-secondary">Submit</button>
+            </form>
+    </div>
+</div>
+
 {% endblock %}
