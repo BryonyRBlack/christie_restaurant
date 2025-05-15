@@ -8,22 +8,19 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left row">
-            {% for product in products %}
+            {% for want in wanted %}
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
                         <div class="image-container">
-                            {% if "placeholder" in product.image.url %}
+                            {% if "placeholder" in want.image.url %}
                             <img class="card-img-top" src="{% static 'images/default.jpg' %}">
                             {% else %}
-                            <img class="card-img-top" src="{{ product.image.url }}">
+                            <img class="card-img-top" src="{{ want.image.url }}">
                             {% endif %}
                             <div class="card-title">
                                 <br>
-                                <h5 class="menu-names">{{ product.name}}</h5> 
-                                    <div class="text-muted">
-                                    <p class="card-text">{{ product.category }}</p>
-                                    </div>
+                                <h5 class="menu-names">{{ want.name }}</h5> 
                             </div>
                         </div>
                     </div>
