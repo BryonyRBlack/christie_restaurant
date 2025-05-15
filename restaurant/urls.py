@@ -32,5 +32,6 @@ urlpatterns = [
     path('contact/', contact_us, name='contact_us'),
     path('', include("home.urls"), name='home-urls'),
     path('menu/', wanted_list, name='menu'),
-    path('news/', include("news.urls"), name='news')
+    path('news/', include("news.urls"), name='news'),
+    path("accounts/", include("allauth.urls")),
 ]
