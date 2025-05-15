@@ -16,7 +16,10 @@
                 <div class="comments p-2 card border-dark mb-4">
                     <h6 class="card-subtitle text-muted card-text">{{ comment.user }} rated this article
                     {{ comment.rating }} Stars</h6>
-                    <p class="card-title review-titles">{{ comment.body | linebreaks }}</p>
+                    <p class="card-title review-titles" id="comment{{ comment.id }}">{{ comment.body }}</p>
+                    {% if user.is_authenticated and comment.user == user %}
+                    <button class="btn edit-btn" data-comment-id="{{ comment.id }}">Edit</button>
+                    {% endif %}
             </div>
             {% endfor %}   
         </div>
@@ -36,4 +39,7 @@
     </div>
 </div>
 
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
