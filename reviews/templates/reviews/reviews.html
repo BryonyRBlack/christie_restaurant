@@ -8,13 +8,11 @@
 <div class="row justify-content-around align-items-start">
     <div class="bg-light p-3 col-md-8 card mt-5" style="max-width: 70rem;">
         <div class="card-body">
-            <h1 class="text-center">The Reviews are in</h1>
+            <h1 class="text-center">Social Feed</h1>
                 {% for review in reviews %}
                 <div class="comments p-2 card border-dark mb-4">
-                    <h5 class="card-title review-titles">{{ review.title | linebreaks }}</h5>
-                    <h6 class="card-subtitle text-muted card-text">{{ review.user }}
-                    {{ review.rating }} Stars</h6>
-                    <p class="card-text">{{ review.body | linebreaks}}</p>
+                    <p class="card-text">{{ review.message | linebreaks}}</p>
+                    <h6 class="card-subtitle text-muted card-text">posted by {{ review.user }}</h6>
             </div>
             {% endfor %}   
         </div>
@@ -22,7 +20,7 @@
 
     
     <div class="forms card bg-light form p-3 text-center col-md-4 mt-5 sticky-top" id="review-form" style="max-width: 30rem;">
-        <h1>Review us Here</h1>
+        <h1>Join the Conversation</h1>
         <form id="reviewForm" method="post" class="d-grid">
             {{ review_form | crispy }}
             {% csrf_token %}
