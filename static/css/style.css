@@ -14,7 +14,7 @@
 
 body {
     background-image: url("../images/wallpaper.webp");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-color: #36454F;
     position: relative;
