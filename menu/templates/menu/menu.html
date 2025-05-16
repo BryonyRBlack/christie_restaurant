@@ -7,10 +7,10 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 mt-3 left row">
+        <div class="col-11 mt-3 row">
             {% for want in wanted %}
-            <div class="col-md-4">
-                <div class="card mb-4">
+            <div class="col-md-2 offset-md-1">
+                <div class="card mb-4" style="height: 25rem; width: 20rem;">
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in want.image.url %}
@@ -18,15 +18,14 @@
                             {% else %}
                             <img class="card-img-top" src="{{ want.image.url }}">
                             {% endif %}
-                            <div class="card-title">
-                                <br>
-                                <h5 class="menu-names">{{ want.name }}</h5> 
-                            </div>
+                        </div>
+                        <div class="card-title">
+                            <h5 class="menu-names">{{ want.name }}</h5> 
                         </div>
                     </div>
                 </div>
             </div>
-            {% if forloop.counter|divisibleby:3 %}
+            {% if forloop.counter|divisibleby:4 %}
         </div>
         <div class="row">
             {% endif %}

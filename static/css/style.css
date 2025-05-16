@@ -62,3 +62,8 @@ a {
 a:hover {
     color: #FFE81F;
 }
+
+.image-container {
+    width: 250px;
+    height: 300px
+}
