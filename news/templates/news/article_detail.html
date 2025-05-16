@@ -19,6 +19,7 @@
                     <p class="card-title review-titles" id="comment{{ comment.id }}">{{ comment.body }}</p>
                     {% if user.is_authenticated and comment.user == user %}
                     <button class="btn edit-btn" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn del-btn" data-comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
             </div>
             {% endfor %}   
@@ -36,6 +37,22 @@
         {% else %}
             <p>Log in to comment</p>
         {% endif %}
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h5 class="modal-title" id="deleteModalLabel">Delete your comment?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            This cannot be undone
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+        </div>
     </div>
 </div>
 

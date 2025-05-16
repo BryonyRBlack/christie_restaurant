@@ -24,19 +24,21 @@ def article_detail(request, slug):
     queryset = Post.objects.filter(status=1)
     article = get_object_or_404(queryset, slug=slug)
     comments = article.comments.all().order_by("-posted")
-    comment_form = CommentForm
+    
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
-            comment.post = comments
+            comment.article = article
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
                 'Comment submitted succesfully'
             )
+
+    comment_form = CommentForm
 
     return render(
         request,
@@ -61,5 +63,18 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment updated succesfully')
         else:
             messages.add_message(request, messages.ERROR, 'This has not been successful')
+
+    return HttpResponseRedirect(reverse('article_detail', args=[slug]))
+
+def comment_delete(request, slug, comment_id):
+    queryset = Post.objects.filter(status=1)
+    article = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, "Comment deleted")
+    else:
+        messages.add_message(request, messages.ERROR, "This has not been deleted")
 
     return HttpResponseRedirect(reverse('article_detail', args=[slug]))
