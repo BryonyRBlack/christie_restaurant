@@ -17,10 +17,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #36454F;
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
 }
 
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     left: 0;
