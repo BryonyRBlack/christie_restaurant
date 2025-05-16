@@ -10,8 +10,8 @@
         {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/holonet.webp' %}" width="75%" alt="Images of Books by Agatha Christie" class="images">{% endif %}
     </div>
     <div class="col-sm-4 bg-light p-5 mt-5 card">
-        <h1>{{ home.title }}</h1>
-        <p>{{ home.content }}</p>
+        <h1 class="text-center">{{ home.title }}</h1>
+        <p>{{ home.content | safe }}</p>
     </div>
 </div>
 <!-- index.html content ends here -->

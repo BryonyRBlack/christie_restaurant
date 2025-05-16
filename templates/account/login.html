@@ -2,7 +2,7 @@
 {% load i18n %}
 {% block content %}
 <div class="container mt-5 bg-light text-center">
-  <h1 class="mb-4 text-center">{% trans "Sign In" %}</h1>
+  <h1 class="mb-4 text-center">{% trans "sign in" %}</h1>
   <form method="post" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
