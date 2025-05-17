@@ -10,6 +10,6 @@ Filters are also used.
 '''
 @admin.register(Contact)
 class ContactAdmin(SummernoteModelAdmin):
-    list_display = ('name', 'email', 'subject', 'created_at')
-    search_fields = ('name', 'email', 'subject', 'message')
-    list_filter = ('created_at',)
+    list_display = ("name", "email", "subject", "created_at")
+    search_fields = ("name", "email", "subject", "message")
+    list_filter = ("created_at",)

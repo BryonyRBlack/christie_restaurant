@@ -19,12 +19,12 @@ def contact_us(request):
             contact.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'You message has been received, we will be in contact shortly'
+                "You message has been received, we will be in contact shortly"
             )
 
     return render(
         request, "contact/contact.html",
         {
-            "contact_form":contact_form
+            "contact_form": contact_form
         }
     )
