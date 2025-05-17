@@ -1,3 +1,5 @@
+// This pulls the required items needed for succesful editing and deleting from the html
+
 const editButtons = document.getElementsByClassName('edit-btn');
 const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
@@ -7,6 +9,8 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("del-btn");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
+
+//This shows that if the button is clicked, than the comment needs to be edited
 for (let button of editButtons) {
     button.addEventListener("click", (e) => {
         let commentId = e.target.getAttribute("data-comment_id");
@@ -17,6 +21,7 @@ for (let button of editButtons) {
     });
 }
 
+//This allows for if the button is clicked, the pop up confirming deletion comes up
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
         let commentId = e.target.getAttribute("data-comment_id");
