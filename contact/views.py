@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.contrib import messages
-from django.http import HttpResponse
-from .models import Contact
 from .forms import ContactForm
 
-# Create your views here.
+'''
+This allows the contact form to be present on the page.
+It checks the form is valid, and confirms to the user that the message has been sent.
+'''
+
 def contact_us(request):
     contact_form = ContactForm()
 
