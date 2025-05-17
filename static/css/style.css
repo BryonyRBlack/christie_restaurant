@@ -67,6 +67,11 @@ a:hover {
     color: #FFE81F;
 }
 
+.btn:hover {
+    color:#FFE81F
+}
+
+
 @media screen and (min-width: 768px){
     body {
         background-image: url("../images/wallpaper.webp");
