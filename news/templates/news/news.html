@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="container mt-5">
-    {% for article in post_list %}
+    {% for article in article_list %}
         <div class="card border-dark mb-3">
             <div class="card-body">
                 <a href="{% url 'article_detail' article.slug %}" class="post-link"><h1 class="card-title">{{ article.title }}</h1></a>

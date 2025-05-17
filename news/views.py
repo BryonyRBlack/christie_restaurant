@@ -2,13 +2,13 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Article, Comment
 from .forms import CommentForm
 
 
 # Create your views here.
 class ArticleList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Article.objects.filter(status=1)
     template_name = 'news/news.html'
 
     #def article_list(request):
@@ -21,7 +21,7 @@ class ArticleList(generic.ListView):
     #)
 
 def article_detail(request, slug):
-    queryset = Post.objects.filter(status=1)
+    queryset = Article.objects.filter(status=1)
     article = get_object_or_404(queryset, slug=slug)
     comments = article.comments.all().order_by("-posted")
     
@@ -50,7 +50,7 @@ def article_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     if request.method == "POST":
-        queryset = Post.objects.filter(status=1)
+        queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
@@ -66,8 +66,8 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
 def comment_delete(request, slug, comment_id):
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    queryset = Article.objects.filter(status=1)
+    article = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.user == request.user:

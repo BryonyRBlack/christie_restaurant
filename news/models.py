@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
-class Post(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
     body = models.TextField()
@@ -20,7 +20,7 @@ class Post(models.Model):
         return self.title
     
 class Comment(models.Model):
-    article = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
     rating = models.PositiveSmallIntegerField(choices=[(i, i) for i in range(1, 6)])
