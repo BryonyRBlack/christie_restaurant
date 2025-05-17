@@ -17,21 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from reviews.views import my_reviews
+from booking import views
 from contact.views import contact_us
 from menu.views import wanted_list
-from booking import views
-#from news.views import article_list
-#from home.views import home_page
+from reviews.views import my_reviews
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('summernote/', include('django_summernote.urls')),
-    path('booking/', views.CreateView.as_view(), name='booking'),
-    path('social_feed/', my_reviews, name='social_feed'),
-    path('contact/', contact_us, name='contact_us'),
     path('', include("home.urls"), name='home-urls'),
-    path('wanted/', wanted_list, name='wanted'),
-    path('news/', include("news.urls"), name='news'),
     path("accounts/", include("allauth.urls")),
+    path('admin/', admin.site.urls),
+    path('booking/', views.CreateView.as_view(), name='booking'),
+    path('contact/', contact_us, name='contact_us'),
+    path('news/', include("news.urls"), name='news'),
+    path('social_feed/', my_reviews, name='social_feed'),
+    path('summernote/', include('django_summernote.urls')),
+    path('wanted/', wanted_list, name='wanted'),
 ]
