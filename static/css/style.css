@@ -74,4 +74,10 @@ a:hover {
         background-position: center;
         background-color: #36454F;
     }
+
+    #review-form {
+        position: sticky;
+        top: 56px;
 }
+}
+
