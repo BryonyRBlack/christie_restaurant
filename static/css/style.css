@@ -14,7 +14,7 @@
   
 /*Styling for general use that apply to multiple areas*/
 body {
-    background-image: url("../images/wallpaper.webp");
+    background-image: url("../images/empire-background.jpeg");
     background-repeat: repeat;
     background-position: center;
     background-color: #36454F;
@@ -67,3 +67,11 @@ a:hover {
     color: #FFE81F;
 }
 
+@media screen and (min-width: 768px){
+    body {
+        background-image: url("../images/wallpaper.webp");
+        background-repeat: repeat;
+        background-position: center;
+        background-color: #36454F;
+    }
+}
