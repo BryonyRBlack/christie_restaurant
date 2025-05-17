@@ -1,3 +1,4 @@
+/*Imported fonts*/
 .pathway-gothic-one-regular {
     font-family: "Pathway Gothic One", sans-serif;
     font-weight: 400;
@@ -11,42 +12,52 @@
     font-style: normal;
   }
   
-
+/*Styling for general use that apply to multiple areas*/
 body {
-    background-image: url("../images/wallpaper.webp");
-    background-repeat: no-repeat;
+    background-image: url("../images/empire-background.jpeg");
+    background-repeat: repeat;
     background-position: center;
     background-color: #36454F;
 }
 
+main{
+    position: relative;
+    min-height: 90vh;
+}
+
+
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     left: 0;
+    margin-top: 10px;
+    padding: 5px;
 }
 
-h1 {
+.footer-text {
+    margin-bottom: 0;
+}
+
+h1, h5 {
     font-family: "Star Wars";
 }
 
-h5 {
-    font-family: "Star Wars";
-}
-
-.card-text {
+/*Styling for specific classes*/
+.card-text, .btn, p, span {
     font-family: "Pathway Gothic One";
-}
-
-.form {
-    max-width: 50%;
-    margin-top: 5%;
 }
 
 .images {
     border-radius: 15%;
 }
 
+.image-container {
+    width: 250px;
+    height: 300px
+}
+
+/*Styling for links*/
 a {
     color: #36454F;
     text-decoration: none;
@@ -55,3 +66,23 @@ a {
 a:hover {
     color: #FFE81F;
 }
+
+.btn:hover {
+    color:#FFE81F
+}
+
+
+@media screen and (min-width: 768px){
+    body {
+        background-image: url("../images/wallpaper.webp");
+        background-repeat: repeat;
+        background-position: center;
+        background-color: #36454F;
+    }
+
+    #review-form {
+        position: sticky;
+        top: 56px;
+}
+}
+
