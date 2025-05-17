@@ -2,11 +2,23 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!--
+This pulls the selected article, so that the user can read the full story.
+This doesn't require individual urls being made for every article.
+The 'safe' insures that this is readable with html
+-->
+
 {% block content %}
 <div class ="container mt-5 bg-light text-center rounded p-5">
     <h1>{{ article.title }}</h1>
     <p>{{ article.body | safe }}</p>
 </div>
+
+<!--
+This pulls the posted comment so that the user can read what others are saying
+The rating shows what the user thought of the article
+If the logged in user is reviewing the page, they are able to edit or delete their comments
+-->
 
 <div class="row justify-content-around align-items-start">
     <div class="bg-light p-3 col-md-8 card mt-5" style="max-width: 30rem;">
@@ -26,6 +38,8 @@
         </div>
     </div>
 
+<!--This allows the user to comment on the story. They must be logged in. They can leave a message and a rating-->
+
 <div class="forms card bg-light form p-3 text-center col-md-4 mt-5 mb-5" id="comment-form" style="max-width: 30rem;">
         {% if user.is_authenticated %}
         <h3>Comment Here</h3>
@@ -40,16 +54,20 @@
     </div>
 </div>
 
+<!--
+This allows a logged in user to delete their comment.
+If the button is clicked a tab comes up confirming if they are sure they want to do this
+-->
+
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Are you sure you want to delete this comment?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete your comment?
-                This action cannot be undone.
+                This cannot be undone.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

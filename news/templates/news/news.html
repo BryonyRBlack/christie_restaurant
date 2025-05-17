@@ -2,6 +2,12 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!--
+This shows all the articles currently on the site.
+This shows them as a list, with only the title and the excerpt showing.
+The user can then click on the article title and it will give them the full article
+-->
+
 {% block content %}
     <div class="container mt-5">
     {% for article in article_list %}
