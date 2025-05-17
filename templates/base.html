@@ -2,9 +2,9 @@
 
 {% url 'index' as index_url %}
 {% url 'booking' as booking_url %}
-{% url 'review' as review_url %}
+{% url 'social_feed' as social_feed_url %}
 {% url 'contact_us' as contact_us_url %}
-{% url 'menu' as menu_url %}
+{% url 'wanted' as wanted_url %}
 {% url 'news' as news_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -52,10 +52,10 @@
                         <a class="nav-link {% if request.path == news_url %}active{% endif %}" aria-current="page" href="{% url 'news' %}">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == menu_url %}active{% endif %}" aria-current="page" href="{% url 'menu' %}">Wanted</a>
+                        <a class="nav-link {% if request.path == wanted_url %}active{% endif %}" aria-current="page" href="{% url 'wanted' %}">Wanted</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == review_url %}active{% endif %}" aria-current="page" href="{% url 'review' %}">Social Feed</a>
+                        <a class="nav-link {% if request.path == social_feed_url %}active{% endif %}" aria-current="page" href="{% url 'social_feed' %}">Social Feed</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == contact_us_url %}active{% endif %}" aria-current="page" href="{% url 'contact_us' %}">Contact Us</a>
