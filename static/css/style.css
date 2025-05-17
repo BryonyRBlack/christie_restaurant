@@ -1,3 +1,4 @@
+/*Imported fonts*/
 .pathway-gothic-one-regular {
     font-family: "Pathway Gothic One", sans-serif;
     font-weight: 400;
@@ -11,7 +12,7 @@
     font-style: normal;
   }
   
-
+/*Styling for general use that apply to multiple areas*/
 body {
     background-image: url("../images/wallpaper.webp");
     background-repeat: repeat;
@@ -29,19 +30,12 @@ footer {
     left: 0;
 }
 
-h1 {
+h1, h5 {
     font-family: "Star Wars";
 }
 
-h5 {
-    font-family: "Star Wars";
-}
-
-.card-text {
-    font-family: "Pathway Gothic One";
-}
-
-.btn {
+/*Styling for specific classes*/
+.card-text, .btn, p, span {
     font-family: "Pathway Gothic One";
 }
 
@@ -54,6 +48,12 @@ h5 {
     border-radius: 15%;
 }
 
+.image-container {
+    width: 250px;
+    height: 300px
+}
+
+/*Styling for links*/
 a {
     color: #36454F;
     text-decoration: none;
@@ -63,7 +63,3 @@ a:hover {
     color: #FFE81F;
 }
 
-.image-container {
-    width: 250px;
-    height: 300px
-}
