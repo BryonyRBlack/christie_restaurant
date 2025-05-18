@@ -8,7 +8,6 @@ It checks the form is valid, and confirms to the user that the message has been 
 '''
 
 def contact_us(request):
-    contact_form = ContactForm()
 
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
@@ -21,6 +20,8 @@ def contact_us(request):
                 request, messages.SUCCESS,
                 "You message has been received, we will be in contact shortly"
             )
+
+    contact_form = ContactForm()
 
     return render(
         request, "contact/contact.html",
