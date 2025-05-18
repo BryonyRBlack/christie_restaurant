@@ -9,7 +9,7 @@
     <div class="row">
         <!--This code alows for the image on the home page to be in the correct place. There is also an alt if it doesn't load properly-->
         <div class="col-sm-4 p-5">
-            {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/holonet.webp' %}" alt="The HoloNet logo" class="images">{% endif %}
+            {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/holonet.webp' %}" alt="The HoloNet logo" class="images" style="width: 90%;">{% endif %}
         </div>
         <!--This code loads the model for the home page content and title. The 'safe' ensures it loads properly with html-->
         <div class="col-sm-4 bg-light p-5 mt-5 card">

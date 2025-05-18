@@ -48,7 +48,7 @@ h1, h5 {
 }
 
 .images {
-    border-radius: 15%;
+    max-width: 75%;
 }
 
 .image-container {
