@@ -25,19 +25,18 @@ If the logged in user is reviewing the page, they are able to edit or delete the
         <div class="card-body">
             <h3 class="text-center">Comments</h3>
                 {% for comment in comments %}
-                <div class="comments p-2 card border-dark mb-4">
+                <div class="comments p-2 card-body border-dark mb-4 ">
                     <h6 class="card-subtitle text-muted card-text">{{ comment.user }} rated this article
                     {{ comment.rating }} Stars</h6>
                     <p class="card-title review-titles" id="comment{{ comment.id }}">{{ comment.body }}</p>
                     {% if user.is_authenticated and comment.user == user %}
-                    <button class="btn edit-btn" data-comment_id="{{ comment.id }}">Edit</button>
-                    <button class="btn del-btn" data-comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-secondary edit-btn" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-secondary del-btn" data-comment_id="{{ comment.id }}">Delete</button>
                     {% endif %}
             </div>
             {% endfor %}   
         </div>
     </div>
-
 <!--This allows the user to comment on the story. They must be logged in. They can leave a message and a rating-->
 
 <div class="forms card bg-light form p-3 text-center col-md-4 mt-5 mb-5" id="comment-form" style="max-width: 30rem;">
