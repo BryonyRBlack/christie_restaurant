@@ -7,7 +7,6 @@
 
 .star-wars {
     font-family: "Star Wars", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
@@ -40,12 +39,12 @@ footer {
 }
 
 h1, h5 {
-    font-family: "Star Wars";
+    font-family: "Star Wars", serif;
 }
 
 /*Styling for specific classes*/
 .card-text, .btn, p, span {
-    font-family: "Pathway Gothic One";
+    font-family: "Pathway Gothic One", sans-serif;
 }
 
 .images {

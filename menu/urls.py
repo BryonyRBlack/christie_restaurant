@@ -1,5 +1,5 @@
-from . import views
 from django.urls import path
+from . import views
 
 '''
 This is in place to show how the wanted list should be displayed

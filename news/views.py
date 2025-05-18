@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Article, Comment
 from .forms import CommentForm
+from .models import Article, Comment
 
 '''
 This allows for all published articles to be visible on the front end.

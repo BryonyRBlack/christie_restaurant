@@ -1,5 +1,5 @@
-from .models import Contact
 from django import forms
+from .models import Contact
 
 '''
 This form allows users to get in touch. 

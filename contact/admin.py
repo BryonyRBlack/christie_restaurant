@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Contact
 from django_summernote.admin import SummernoteModelAdmin
-
+from .models import Contact
 
 '''
 This registers the contact form to the admin site, so that sent messages can be read by those with access.

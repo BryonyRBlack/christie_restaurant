@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Article, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Article, Comment
 
 '''
 This registers the Article model to the admin page.

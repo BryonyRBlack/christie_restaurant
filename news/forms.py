@@ -1,5 +1,5 @@
-from .models import Comment
 from django import forms
+from .models import Comment
 
 '''
 The comment form allows the user to leave a comment on the article.
