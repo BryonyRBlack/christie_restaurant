@@ -7,8 +7,11 @@ from .models import Article, Comment
 
 '''
 This allows for all published articles to be visible on the front end.
-It also shows the comment form, and if the user is logged in, they are able to leave a comment, and receive confirmation.
+It also shows the comment form, and if the user is logged in,
+they are able to leave a comment, and receive confirmation.
 '''
+
+
 # Create your views here.
 class ArticleList(generic.ListView):
     queryset = Article.objects.filter(status=1)
@@ -19,7 +22,7 @@ def article_detail(request, slug):
     queryset = Article.objects.filter(status=1)
     article = get_object_or_404(queryset, slug=slug)
     comments = article.comments.all().order_by("-posted")
-    
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -39,14 +42,16 @@ def article_detail(request, slug):
         "news/article_detail.html",
         {"article": article,
          "comments": comments,
-         "comment_form": comment_form
-        }
+         "comment_form": comment_form}
     )
 
+
 '''
-If a user is logged in and has previously left a comment, this allows them to edit the comment.
+If a user is logged in and has previously left a comment,
+this allows them to edit the comment.
 If this is done succesfully, they receive a confirmation message
 '''
+
 
 def comment_edit(request, slug, comment_id):
     if request.method == "POST":
@@ -59,16 +64,21 @@ def comment_edit(request, slug, comment_id):
             comment = comment_form.save(commit=False)
             comment.post = article
             comment.save()
-            messages.add_message(request, messages.SUCCESS, "Comment updated succesfully")
+            messages.add_message(request, messages.SUCCESS,
+                                 "Comment updated succesfully")
         else:
-            messages.add_message(request, messages.ERROR, "This has not been successful")
+            messages.add_message(request, messages.ERROR,
+                                 "This has not been successful")
 
     return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
+
 '''
-If a user is logged in and previously left a comment, this allows them to delete the comment.
+If a user is logged in and previously left a comment,
+this allows them to delete the comment.
 If this is successful, they receive a confirmation message.
 '''
+
 
 def comment_delete(request, slug, comment_id):
     queryset = Article.objects.filter(status=1)
@@ -77,8 +87,10 @@ def comment_delete(request, slug, comment_id):
 
     if comment.user == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, "Comment deleted")
+        messages.add_message(request, messages.SUCCESS,
+                             "Comment deleted")
     else:
-        messages.add_message(request, messages.ERROR, "This has not been deleted")
+        messages.add_message(request, messages.ERROR,
+                             "This has not been deleted")
 
     return HttpResponseRedirect(reverse("article_detail", args=[slug]))

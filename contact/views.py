@@ -4,8 +4,10 @@ from .forms import ContactForm
 
 '''
 This allows the contact form to be present on the page.
-It checks the form is valid, and confirms to the user that the message has been sent.
+It checks the form is valid
+and confirms to the user that the message has been sent.
 '''
+
 
 def contact_us(request):
 

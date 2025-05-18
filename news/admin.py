@@ -2,12 +2,14 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Article, Comment
 
+
 '''
 This registers the Article model to the admin page.
 Summernote is included to make writing on the admin page easier.
 Prepopulated fields allow ensurance that the title and the slug are the same
 The admin user is able to filter through the article objects
 '''
+
 
 # Register your models here.
 @admin.register(Article)
@@ -17,5 +19,6 @@ class PostAdmin(SummernoteModelAdmin):
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}
     summernote_fields = ("body",)
+
 
 admin.site.register(Comment)
