@@ -1,20 +1,52 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load i18n %} {% block content %}
+<div class="container bg-light"></div>
+  <div class="container bg-light text-center p-3 mt-3">
+    <h1>Sign Up</h1>
+    <p>Already have an account? <br>
+        <a href="/accounts/login/" class="btn btn-secondary">Sign In</a>
+    </p>
 
-{% load i18n %}
+    <form class="signup" method="post" action="/accounts/signup/">
+      <input type="hidden" name="csrfmiddlewaretoken" value="DCFaz3POqsMxtCLSmVEPDk0I6lgFz9fjQdLARm6jgSLCkVblemit0spb2dtWJm6o">
+      <p>
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" placeholder="Username" autocomplete="username" minlength="1" maxlength="150" required id="id_username">
+      </p>
 
-{% block content %}
-<div class="container bg-light text-center p-3 mt-3">
-    <h1>{% trans 'Sign Up' %}</h1>
-    <p>{% blocktrans %}Already have an account? <br><a href="{{ login_url }}" class="btn btn-secondary">Sign In</a>{% endblocktrans %}</p>
+      <p>
+        <label for="id_email">Email (optional):</label>
+        <input type="email" name="email" placeholder="Email address" autocomplete="email" maxlength="320" id="id_email">
+      </p>
 
-    <form class="signup" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-        {% endif %}
-        <button type="submit" class="btn btn-secondary w-100">{% trans "Sign Up" %} &raquo;</button>
+      <p>
+        <label for="id_password1">Password:</label>
+        <input type="password" name="password1" placeholder="Password" autocomplete="new-password" required id="id_password1">
+
+        <div class="helptext">
+            <ul class="list-unstyled">
+                <li> 
+                    Your password can’t be too similar to your other personal information.
+                </li>
+                <li>
+                    Your password must contain at least 8 characters.
+                </li>
+                <li>
+                    Your password can’t be a commonly used password.
+                </li>
+                <li>
+                    Your password can’t be entirely numeric.
+                </li>
+            </ul>
+        </div>
+
+
+      <p>
+        <label for="id_password2">Password (again):</label>
+        <input type="password" name="password2" placeholder="Password (again)" autocomplete="new-password" required id="id_password2">
+      </p>
+
+      <button type="submit" class="btn btn-secondary w-100">Sign Up &raquo;</button>
     </form>
-</div>
+  </div>
 
-{% endblock content %}
+  {% endblock content %}

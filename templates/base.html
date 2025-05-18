@@ -20,7 +20,7 @@
     <!--Page title and favicon icon-->
     <title>{% block title %}HoloNet{% endblock %}</title>
     <link rel = 'icon' type="image/x-icon" href="../static/images/favicon-32x32.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Imported fonts Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,9 +80,9 @@
                 </ul>
                 <span class="text-muted">
                     {% if user.is_authenticated %}
-                    <p class="text-end">Welcome back {{user}}</p>
+                    <span class="text-end">Welcome back {{user}}</span>
                     {% else %}
-                    <p class="text-end">You are not logged in, and won't be able to comment</p>
+                    <span class="text-end">You are not logged in, and won't be able to comment</span>
                     {% endif %}
                 </span>
             </div>

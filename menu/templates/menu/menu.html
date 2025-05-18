@@ -22,9 +22,9 @@ The if statement sets the structure for how this is displayed on the screen.
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in want.image.url %}
-                            <img class="card-img-top" src="{% static 'images/default.jpg' %}">
+                            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Placeholder item">
                             {% else %}
-                            <img class="card-img-top" src="{{ want.image.url }}">
+                            <img class="card-img-top" src="{{ want.image.url }}" alt="{{ want.name }}">
                             {% endif %}
                         </div>
                         <div class="card-title">
