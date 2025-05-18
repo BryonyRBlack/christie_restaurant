@@ -12,7 +12,7 @@
             {% if "placeholder" in home.side_image.url %} <img src="{% static 'images/holonet.webp' %}" alt="The HoloNet logo" class="images" style="width: 90%;">{% endif %}
         </div>
         <!--This code loads the model for the home page content and title. The 'safe' ensures it loads properly with html-->
-        <div class="col-sm-4 bg-light p-5 mt-5 card">
+        <div class="col-sm-6 bg-light p-5 mt-5 card">
             <h1 class="text-center">{{ home.title }}</h1>
             {{ home.content | safe }}
         </div>

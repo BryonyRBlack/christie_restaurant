@@ -15,9 +15,9 @@ The if statement sets the structure for how this is displayed on the screen.
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-11 mt-3 row">
+        <div class="col-sm-11 mt-3 row">
             {% for want in wanted %}
-            <div class="col-md-2 offset-md-1">
+            <div class="col-sm-2 offset-sm-1">
                 <div class="card mb-4" style="height: 25rem; width: 20rem;">
                     <div class="card-body">
                         <div class="image-container">
@@ -35,7 +35,7 @@ The if statement sets the structure for how this is displayed on the screen.
             </div>
             {% if forloop.counter|divisibleby:4 %}
         </div>
-        <div class="row col-11 mt-3">
+        <div class="row col-sm-11 mt-3">
             {% endif %}
             {% endfor %}
         </div>
