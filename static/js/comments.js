@@ -9,7 +9,6 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("del-btn");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
-
 //This shows that if the button is clicked, than the comment needs to be edited
 for (let button of editButtons) {
     button.addEventListener("click", (e) => {
