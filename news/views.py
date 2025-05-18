@@ -24,7 +24,7 @@ def article_detail(request, slug):
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
-            comment.author = request.user
+            comment.user = request.user
             comment.article = article
             comment.save()
             messages.add_message(

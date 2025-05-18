@@ -9,4 +9,4 @@ It requires the user to be logged in, a place for a message, and a rating.
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ("user", "body", "rating",)
+        fields = ("body", "rating",)
