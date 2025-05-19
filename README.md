@@ -36,6 +36,11 @@ Those with admin privellages are the only ones able to post articles, and on the
 ## Original Design
 
 ### Original WireFrames
+<details>
+<summary>
+Wireframes for the origianl restaurant design
+</details>
+
 ![Image of a WireFrame designed for a restaurant. Shows the home page, and the booking page](/static/images/restaurant%20wireframe.png)
 ![Image of a WireFrame designed for a restaurant. Shows the menu page, and the review page](/static/images/restaurant%20wireframe%202.png)
 
@@ -47,6 +52,24 @@ Those with admin privellages are the only ones able to post articles, and on the
 ![Screenshot of the original website design. Shows the contact page](/static/images/AC%20Contact%20Us.png)
 
 The above is the original planning and design used when this was a restaurant website. Some of these I have kept, as detailed below.
+
+## New Planning
+After deciding to change the website purpose, the first thing I did was create new wireframes for the purpose. 
+<details>
+<summary>
+New Wireframes
+</summary>
+
+![Image of a WireFrame. Shows the home page, and the news page](/static/images/wireframe%201.png)
+![Image of a WireFrame. Shows the social feed page, and the contact page](/static/images/wireframe%202.png)
+
+I then went on to plan the new design. I opted to keep the same navigation bar, as it was a clean design which wasn't specific to a restaurant.
+For the wallpapers, I used images found for the Star Wars world. For smaller screens this is the Imperial design, wilst for larger screens this becomes hyper drive. This as closely linked to Star Wars, and so recognisable.
+
+The articles are shown on a white background, with the text in black. This is to keep a clean organised look.
+When hovered on, links on the page turn yellow (#FFE81F). This is the shade of the Star Wars logo, and ties in with this world. I opted to have the news listed in descending order, so it was clear what was the most recent article.
+
+</details>
 
 ## Features
 ### Overview

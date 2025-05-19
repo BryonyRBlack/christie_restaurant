@@ -15,16 +15,18 @@ The if statement sets the structure for how this is displayed on the screen.
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-9 mt-3 row">
+        <div class="col-sm-10 mt-3 row">
             {% for want in wanted %}
             <div class="col-sm-2 offset-sm-2">
                 <div class="card mb-4" style="height: 25rem; width: 20rem;">
                     <div class="card-body">
+                        <div class="image-container">
                             {% if "placeholder" in want.image.url %}
                             <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Placeholder item">
                             {% else %}
                             <img class="card-img-top" style="width: 200px;" src="{{ want.image.url }}" alt="{{ want.name }}">
                             {% endif %}
+                        </div>
                         <div class="card-title">
                             <h5 class="menu-names">{{ want.name }}</h5> 
                         </div>
@@ -33,7 +35,7 @@ The if statement sets the structure for how this is displayed on the screen.
             </div>
             {% if forloop.counter|divisibleby:3 %}
         </div>
-        <div class="row col-sm-9 mt-3">
+        <div class="row col-sm-10 mt-3">
             {% endif %}
             {% endfor %}
         </div>
