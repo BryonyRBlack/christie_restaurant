@@ -52,7 +52,7 @@ This has not been implimented. This would be a future addition.
 All forms and models provided have been manually tested.
 * Home page - the object is visible. Pass
 * News page - the articles show up in a list order. They have the user-input title and except. Pass
-* Article detai - When clicked, the correct article is displayed in full - pass
+* Article detail - When clicked, the correct article is displayed in full - pass
   * Comments - the form can be filled in, and posts immedietly to the page. The comment shows the logged in user correctly. The range function works for the rating. Pass
 * Wanted - The objects show correctly on the page. Pass
 * Social Feed - the form can be filled in, and posts immedietly to the page. The message shows the logged in user correctly. Pass
