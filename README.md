@@ -6,7 +6,25 @@ A website based in the Star Wars universe, which gives updates on events taking 
 
 The aim of the website is to provide news updates, as well as allow reigstered users to take part in the conversation by comments or on the social feed.
 
+[Live Site](https://christie-restaurant-fa4bd564fbe8.herokuapp.com/)
+[GitHub Repository](https://github.com/BryonyRBlack/christie_restaurant)
+
 ## Contents
+[Overview](#overview)
+
+[Original Design](#original-design)
+
+[New Planning](#new-planning)
+
+[Features](#features)
+
+[Testing](#testing)
+
+[Technologies Used](#technologies-used)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
 
 ## Overview
 The HoloNet is a way to publish news articles that can be commented on, as well as a social feed for users to use at will. The website is based within the Star Wars universe, and the news articles focus on this.
@@ -39,7 +57,7 @@ Those with admin privellages are the only ones able to post articles, and on the
 <details>
 <summary>
 Wireframes for the origianl restaurant design
-</details>
+</summary>
 
 ![Image of a WireFrame designed for a restaurant. Shows the home page, and the booking page](/static/images/restaurant%20wireframe.png)
 ![Image of a WireFrame designed for a restaurant. Shows the menu page, and the review page](/static/images/restaurant%20wireframe%202.png)
@@ -50,6 +68,8 @@ Wireframes for the origianl restaurant design
 ![Screenshot of the original website design. Shows the menu page](/static/images/AC%20menu.png)
 ![Screenshot of the original website design. Shows the reviews page](/static/images/AC%20reviews.png)
 ![Screenshot of the original website design. Shows the contact page](/static/images/AC%20Contact%20Us.png)
+
+</details>
 
 The above is the original planning and design used when this was a restaurant website. Some of these I have kept, as detailed below.
 
@@ -62,6 +82,9 @@ New Wireframes
 
 ![Image of a WireFrame. Shows the home page, and the news page](/static/images/wireframe%201.png)
 ![Image of a WireFrame. Shows the social feed page, and the contact page](/static/images/wireframe%202.png)
+</details>
+
+I then planned what I would like to include on the website [klana board](https://github.com/users/BryonyRBlack/projects/5/views/1)
 
 I then went on to plan the new design. I opted to keep the same navigation bar, as it was a clean design which wasn't specific to a restaurant.
 For the wallpapers, I used images found for the Star Wars world. For smaller screens this is the Imperial design, wilst for larger screens this becomes hyper drive. This as closely linked to Star Wars, and so recognisable.
@@ -120,7 +143,7 @@ For smaller devices, the navigation shrinks into a burger icon, rather than take
 The footer sits along the bottom of all of the pages. It shows the copyright.
 
 ## Testing
-Please see the testing documentation here
+Please see the testing documentation [here](/testing.md)
 
 ## Technologies used
 Fontend: HTML, CSS, JavaScript, Bootstrap
@@ -134,6 +157,16 @@ Liberies and dependecies:
 * WhiteNoise
 
 ## Deployment
+### VS Studios
+* Create a folder on the computer
+* Open the folder within VS
+* Create a new repository on GitHub
+* In VS, paste the commands provided by GitHub into the commanline
+* Create a Venv enviroment, and add this to gitignore
+* Install Django, and update the requirements file
+* Using the comman line, create the required apps
+
+### Deploy to Heroku
 * Created the site within VS
 * Linked the VS code, to a repository on GitHub
 * In Heroku, created a new app
