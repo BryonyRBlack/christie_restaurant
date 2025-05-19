@@ -48,6 +48,20 @@ The first passes. The latter has not been implimented for the social feed, howev
 
 This has not been implimented. This would be a future addition.
 
+## Python Testing
+All forms and models provided have been manually tested.
+* Home page - the object is visible. Pass
+* News page - the articles show up in a list order. They have the user-input title and except. Pass
+* Article detai - When clicked, the correct article is displayed in full - pass
+  * Comments - the form can be filled in, and posts immedietly to the page. The comment shows the logged in user correctly. The range function works for the rating. Pass
+* Wanted - The objects show correctly on the page. Pass
+* Social Feed - the form can be filled in, and posts immedietly to the page. The message shows the logged in user correctly. Pass
+* Contact page - The form can be filled in. Once sent, this is received on the admin page. This is not shown to other users. Pass
+* Account
+  * Register - this successfully lets a user create an account. Pass
+  * Sign in - this succesfully lets a user log in. Pass
+  * Sign out - this succesfully lets a user log out. Pass
+
 ## JavaScript Testing
 ### Update button
 ![Screenshot of comment add to page](/static/images/comment%20test%20basic.png)
