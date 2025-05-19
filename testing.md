@@ -68,85 +68,167 @@ If the delete button is clicked, a warning message appears asking if the user is
 If the user clicks the delete, the comment is immedietly removed.
 
 ## Lighthouse checks
+<details>
+<summary>
 The Lighthouse test for mobile
+</summary>
 
 ![Screenshot of Lighthouse mobile test](/static/images/lighthouse%20mobile.png)
+</details>
 
-
+<details>
+<summary>
 The Lighthouse test for desktop
+</summary>
 
 ![Screenshot of Lighthouse mobile test](/static/images/lighthouse%20desktop.png)
+</details>
 
 ## Code Validation
 ### HTML
+<details>
+<summary>
 Home Page
+</summary>
+
 ![Screenshot of HTML validation for home page](/static/images/html%20test%20home.png)
+</details>
 
+<details>
+<summary>
 News Page
+</summary>
+
 ![Screenshot of HTML validation for news page](/static/images/html%20news%20page%20test.png)#
+</details>
 
+<details>
+<summary>
 Article Detail
+</summary>
+
 ![Screenshot of HTML validation for article detail](/static/images/html%20article%20detail%20test.png)
+</details>
 
+<details>
+<summary>
 Wanted Page
+</summary>
+
 ![Screenshot of HTML validation for wanted page](/static/images/html%20test%20wanted.png)
+</details>
 
+<details>
+<summary>
 Social Feed
-![Screenshot of HTML validation for social feed page](/static/images/html%20test%20social%20feed.png)
+</summary>
 
+![Screenshot of HTML validation for social feed page](/static/images/html%20test%20social%20feed.png)
+</details>
+
+<details>
+<summary>
 Contact Us
 ![Screenshot of HTML validation for contact page](/static/images/html%20test%20contact.png)
+</details>
 
+<details>
+<summary>
 Register
+</summary>
+
 ![Screenshot of HTML validation for register page](/static/images/html%20test%20register%20page.png)
+</details>
 
+<details>
+<summary>
 Sign In
+</summary>
 ![Screenshot of HTML validation for sign in page](/static/images/html%20test%20sign%20in.png)
+</details>
 
+<details>
+<summary>
 Sign Out
+</summary>
+
 ![Screenshot of HTML validation for sign out page](/static/images/html%20test%20sign%20out.png)
+</details>
 
 ### CSS
-![Screenshot of CSS validation](/static/css/style.css)
+<details>
+<summary>
+CSS Testing
+</summary>
+
+![Screenshot of CSS validation](/static/images/css%20test.png)
+</details>
+
 ### Python
+<details>
+<summary>
 Home Page
+</summary>
 
 ![Screenshot of python validation for home page](/static/images/python%20testing%20home%20admin.png)
 ![Screenshot of python validation for home page](/static/images/python%20testing%20home%20models.png)
 ![Screenshot of python validation for home page](/static/images/python%20testing%20home%20urls.png)
 ![Screenshot of python validation for home page](/static/images/python%20testing%20home%20views.png)
+</details>
 
+<details>
+<summary>
 News
+</summary>
 
 ![Screenshot of python validation for news page](/static/images/python%20testing%20news%20admin.png)
 ![Screenshot of python validation for news page](/static/images/python%20testing%20news%20forms.png)
 ![Screenshot of python validation for news page](/static/images/python%20testing%20news%20models.png)
 ![Screenshot of python validation for news page](/static/images/python%20testing%20news%20urls.png)
 ![Screenshot of python validation for news page](/static/images/python%20testing%20news%20views.png)
+</details>
 
+<details>
+<summary>
 Wanted (app name currently 'menu')
+</summary>
 
 ![Screenshot of python validation for wanted page](/static/images/python%20testing%20menu%20admin.png)
 ![Screenshot of python validation for wanted page](/static/images/python%20testing%20menu%20models.png)
 ![Screenshot of python validation for wanted page](/static/images/python%20testing%20menu%20urls.png)
 ![Screenshot of python validation for wanted page](/static/images/python%20testing%20menu%20views.png)
+</details>
 
+<details>
+<summary>
 Social Feed (app name currently 'reviews')
+</summary>
 
 ![Screenshot of python validation for social feed page](/static/images/python%20testing%20reviews%20admin.png)
 ![Screenshot of python validation for social feed page](/static/images/python%20testing%20reviews%20models.png)
 ![Screenshot of python validation for social feed page](/static/images/python%20testing%20reviews%20urls.png)
 ![Screenshot of python validation for social feed page](/static/images/python%20testing%20reviews%20views.png)
+</details>
 
+<details>
+<summary>
 Contact
+</summary>
 
 ![Screenshot of python validation for contact page](/static/images/python%20testing%20contact%20admin.png)
 ![Screenshot of python validation for contact page](/static/images/python%20testing%20contact%20models.png)
 ![Screenshot of python validation for contact page](/static/images/python%20testing%20contact%20urls.png)
 ![Screenshot of python validation for contact page](/static/images/python%20testing%20contact%20views.png)
+</details>
 
 ### JavaScript
+<details>
+<summary>
+JavaScript validation
+</summary>
+
 ![Screenshot of JavaScript validation for contact page](/static/images/javascript%20testing.png)
+</details>
 
 One unnamed variable shows here. However as this is connected to the html where bootstrap is used, I have no concerns.
 
