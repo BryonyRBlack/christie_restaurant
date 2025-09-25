@@ -17,12 +17,12 @@ These have passed
 * If logged in as a superuser, I can create, update and delete articles.
 * If logged in as a user, can read articles.
 
-These have passed. In addition, non-registered users can also read articles, however can not post comments.
+These have passed. However the superuser's abilitiy to create and delete articles is only available in admin mode. Making this available on the front end would be a future feature to impliment. In addition, non-registered users can also read articles, however can not post comments.
 
 ### Create Drafts
 * Superuser can draft articles, that can be accessed later
 
-This has passed
+This has passed, however this is currently only available in admin mode. Making this available on the front end would be a future feature to impliment.
 
 ### View Wanted Page
 * User able to view the page and know who is being looked for.
@@ -33,13 +33,13 @@ This has passed
 * Ability to add new entries
 * Ability to delete entries
 
-This has passed
+This has passed, however is only available to the superuser on the admin page.
 
 ### Social Feed
 * The ability to post
 * The ability to delete or edit posts later
 
-The first passes. The latter has not been implimented for the social feed, however is available on the comments on artciles. This was due to time restraints, and would be a future addition.
+The first passes. The latter has not been implimented for the social feed, however is available on the comments on articles. This was due to time restraints, and would be a future addition.
 
 ### Like or dislike a comment
 * A fully functional like button
