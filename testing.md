@@ -6,9 +6,8 @@
 * When the title is clicked, the whole article is shown
 
 | Test | What was Carried Out | Result |
-| ---- | ---- | ---- | ---- |
-| The full article showing when the title is clicked | On the list of articles, clicked onto the title | Pass, the full artcile was opened |
 | ---- | ---- | ---- |
+| The full article showing when the title is clicked | On the list of articles, clicked onto the title | Pass, the full artcile was opened  |
 
 
 This has passed
@@ -28,7 +27,6 @@ This has passed
 | On the log in page, when the username and password are entered correctly, the user can log in | On the log in page, the username and password are entered correctly | Pass, the user is able to log in. |
 | On the log in page, when the username is entered incorrectly, the user cannot log in | On the log in page, the username is entered incorrectly | Pass, the user is unable to log in. |
 | On the log in page, when the password is entered incorrectly, the user cannot log in | On the log in page, the password is entered incorrectly | Pass, the user is unable to log in. |
-| ---- | ---- | ---- |
 
 These have all passed
 
