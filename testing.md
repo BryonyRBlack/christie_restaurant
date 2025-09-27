@@ -2,7 +2,14 @@
 
 ## User Stories
 ### Read an article
+
 * When the title is clicked, the whole article is shown
+
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- | ---- |
+| The full article showing when the title is clicked | On the list of articles, clicked onto the title | Pass, the full artcile was opened |
+| ---- | ---- | ---- |
+
 
 This has passed
 
@@ -11,21 +18,48 @@ This has passed
 * The ability to log in
 * Access to post comments
 
-These have passed
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| When a username and password is entered as directed, the user can make an account | On the register page, a username and a password meeting critera was entered | Pass, an account was created |
+| If a username is not entered, an account cannot be created | On the register page, an email address and a password was entered, however a username was not | Pass, the user is unable to create an account without a username |
+| If a password is not entered, an account cannot be created | On the register page, an email address and a username was entered, however a password was not | Pass, the user is unable to create an account without a password |
+| If the password does not meet the criteria, an account cannot be created | On the register page, the password entered did not meet the stated requirements | Pass, the user is unable to create an account if the password does not meet criteria |
+| If the password and the password confirmation aren't the same, the user cannot make an account | On the register page, two different passwords were entered | Pass, the user is unable to create an account if the password and password confirmation do not match.
+| On the log in page, when the username and password are entered correctly, the user can log in | On the log in page, the username and password are entered correctly | Pass, the user is able to log in. |
+| On the log in page, when the username is entered incorrectly, the user cannot log in | On the log in page, the username is entered incorrectly | Pass, the user is unable to log in. |
+| On the log in page, when the password is entered incorrectly, the user cannot log in | On the log in page, the password is entered incorrectly | Pass, the user is unable to log in. |
+| ---- | ---- | ---- |
+
+These have all passed
 
 ### Manage Articles
 * If logged in as a superuser, I can create, update and delete articles.
 * If logged in as a user, can read articles.
+
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| As the superuser, I can create an article | On the admin page, the plus sign was clicked to create a new post. Then the CHECK THIS was changed to published, and the post was visable on the blog | Pass, a post was created. |
+| As the superuser, I can update an article | On the admin page, I can view the list of articles, and click the edit button to update them. | Pass, a post can be updated. |
+| As the superuser, I can delete an article | On the admin page, I can view the list of articles, and click the delete button to remove them. | Pass, a post was deleted. |
+| As a user, I can read an article | On the frontend, I could click onto an article's title and read the post. | Pass, the post can be read. |
 
 These have passed. However the superuser's abilitiy to create and delete articles is only available in admin mode. Making this available on the front end would be a future feature to impliment. In addition, non-registered users can also read articles, however can not post comments.
 
 ### Create Drafts
 * Superuser can draft articles, that can be accessed later
 
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| As the superuser, I can draft an article | On the admin page, the plus sign was clicked to create a new post. Then the CHECK THIS was changed to draft, and the post was saved. | Pass, a post was created and saved. |
+
 This has passed, however this is currently only available in admin mode. Making this available on the front end would be a future feature to impliment.
 
 ### View Wanted Page
 * User able to view the page and know who is being looked for.
+
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| As a user, I am able to see the content on the wanted page | Clicking onto the wanted page shows the required images. | Pass, the images are visable. |
 
 This has passed
 
@@ -33,13 +67,25 @@ This has passed
 * Ability to add new entries
 * Ability to delete entries
 
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| As the superuser, I can create new entries on the wanted page | On the admin page, the plus sign was clicked to create a new entry. Then the CHECK THIS was changed to published, and the post was visable on the blog | Pass, an entry was created. |
+| As the superuser, I can delete an entry | On the admin page, I can view the list of entries, and click the delete button to remove them. | Pass, an entry was deleted. |
+
 This has passed, however is only available to the superuser on the admin page.
 
 ### Social Feed
 * The ability to post
 * The ability to delete or edit posts later
 
-The first passes. The latter has not been implimented for the social feed, however is available on the comments on articles. This was due to time restraints, and would be a future addition.
+| Test | What was Carried Out | Result |
+| ---- | ---- | ---- |
+| As a user, I can read the comments | I could click onto an social feed and read the posted comments. | Pass, the comments can be read. |
+| As a user, I can create a comment | On the social feed, I can type a comment and post it | Pass, a comment was created. |
+| A empty comment cannot be posted | On the social feed page, if the text field has not been filled out, a comment is not posted. | Pass, a warning comes up advising the text field cannot be left empty. |
+
+
+The ability to delete or edit a comment has not been implimented for the social feed, however is available on the comments on articles. This was due to time restraints, and would be a future addition.
 
 ### Like or dislike a comment
 * A fully functional like button
