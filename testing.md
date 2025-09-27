@@ -189,6 +189,8 @@ Social Feed
 <details>
 <summary>
 Contact Us
+</summary>
+
 ![Screenshot of HTML validation for contact page](/static/images/html%20test%20contact.png)
 </details>
 
@@ -204,6 +206,7 @@ Register
 <summary>
 Sign In
 </summary>
+
 ![Screenshot of HTML validation for sign in page](/static/images/html%20test%20sign%20in.png)
 </details>
 
